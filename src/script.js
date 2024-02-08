@@ -10,6 +10,14 @@ const fetchJoke = async ()=>{
 	renderJoke(data.value)
 }
 
+// Render joke function
 
+const renderJoke = (joke)=>{
+	const paragraph = document.createElement('p');
 
-fetchJoke()
+	jokeContainer.appendChild(paragraph);
+
+	paragraph.textContent = joke
+}
+
+jokeButton.addEventListener('click', fetchJoke);
